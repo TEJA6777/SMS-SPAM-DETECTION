@@ -68,7 +68,7 @@ A visual walkthrough of the interface and its usage:
 
 📥 Paste or type any SMS/email content.
 
-![Input Box](assets/input_box.png)
+![Input Box](assets/webpage1.png)
 
 > Example: *"Claim your free iPhone now!"*
 
@@ -78,7 +78,7 @@ A visual walkthrough of the interface and its usage:
 
 🚀 Triggers the preprocessing and classification pipeline.
 
-![Predict Button](assets/webpage1.png)
+![Predict Button](assets/webpage2.png)
 
 > Internally, it transforms the message and feeds it to the trained model.
 
@@ -87,10 +87,10 @@ A visual walkthrough of the interface and its usage:
 ### 📍 3. Get Prediction Result
 
 #### ✅ Not Spam:
-![Not Spam Result](assets/webpage2.png)
+![Not Spam Result](assets/webpage3.png)
 
 #### 🚫 Spam:
-![Spam Result](assets/webpage3.png)
+![Spam Result](assets/webpage4.png)
 
 > Prediction is shown clearly using `st.header()` output.
 
