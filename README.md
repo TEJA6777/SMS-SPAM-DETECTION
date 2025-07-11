@@ -6,18 +6,18 @@ This project is a **machine learning-based web application** that detects whethe
 
 ## 🚀 Features
 
-- Clean and interactive web interface built using Streamlit
-- Accepts user input via text area to check for spam
-- Preprocessing includes tokenization, stopword removal, and stemming
-- Uses TF-IDF for vectorization
-- Trained on a labeled SMS spam dataset
-- Multiple algorithms evaluated for performance comparison
+- ✅ Clean and interactive web interface built using Streamlit  
+- ✅ Real-time spam classification based on user input  
+- ✅ Advanced text preprocessing (tokenization, stopword removal, stemming)  
+- ✅ TF-IDF vectorizer for numerical feature representation  
+- ✅ Trained and evaluated multiple ML algorithms  
+- ✅ Visual walkthrough of UI included  
 
 ---
 
 ## 🤖 Algorithm Performance
 
-The following machine learning models were trained and evaluated. Here are the results based on test set accuracy and precision:
+The following machine learning models were trained and evaluated. Results are based on test set accuracy and precision:
 
 | S.No | Algorithm                       | Accuracy  | Precision |
 |------|----------------------------------|-----------|-----------|
@@ -33,30 +33,66 @@ The following machine learning models were trained and evaluated. Here are the r
 | 10   | Bagging Classifier (BgC)         | 0.958     | 0.868     |
 | 11   | Decision Tree (DT)               | 0.932     | 0.833     |
 
-> ✅ **SVC** and **Random Forest** achieved the highest accuracy, while **Naive Bayes** scored perfect precision.
+> ✅ **Best Accuracy**: Random Forest, SVC  
+> 💯 **Perfect Precision**: Naive Bayes  
 
 ---
 
 ## 🧪 Dataset
 
 - **Source**: [Kaggle - SMS Spam Collection Dataset](https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset)
-- **Records**: 5,572 messages
-- **Classes**: `ham` (not spam), `spam`
+- **Total Records**: 5,572 messages  
+- **Labels**: `ham` (not spam), `spam`
 
 ---
 
-## 🖥 Streamlit Web App
+## 🧠 Message Classification Pipeline
 
-### 🧩 Message Classification Flow:
-
-1. User enters message text in the app.
-2. Text is preprocessed:
+1. User inputs message
+2. Text preprocessing:
    - Lowercasing
    - Tokenization
-   - Removing stopwords and punctuation
+   - Stopword & punctuation removal
    - Stemming
-3. Transformed into TF-IDF vector
-4. Model predicts whether it's spam or not
+3. TF-IDF vectorization
+4. ML model prediction
+5. Display: Spam or Not Spam
+
+---
+
+## 🖥️ Streamlit Web App Demo
+
+A visual walkthrough of the interface and its usage:
+
+### 🧾 1. Enter a Message
+
+📥 Paste or type any SMS/email content.
+
+![Input Box](assets/input_box.png)
+
+> Example: *"Claim your free iPhone now!"*
+
+---
+
+### 🔘 2. Click the "Predict" Button
+
+🚀 Triggers the preprocessing and classification pipeline.
+
+![Predict Button](assets/webpage1.png)
+
+> Internally, it transforms the message and feeds it to the trained model.
+
+---
+
+### 📍 3. Get Prediction Result
+
+#### ✅ Not Spam:
+![Not Spam Result](assets/webpage2.png)
+
+#### 🚫 Spam:
+![Spam Result](assets/webpage3.png)
+
+> Prediction is shown clearly using `st.header()` output.
 
 ---
 
